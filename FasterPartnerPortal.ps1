@@ -21,7 +21,7 @@ $CustomerLinks = foreach ($customer in $customers) {
         'O365 Admin Portal'      = "<a target=`"_blank`" href=`"https://portal.office.com/Partner/BeginClientSession.aspx?CTID=$($customer.TenantId)&CSDEST=o365admincenter`">O365 Portal</a>"
         'Exchange Admin Portal'  = "<a target=`"_blank`" href=`"https://outlook.office365.com/ecp/?rfr=Admin_o365&exsvurl=1&amp;delegatedOrg=$($Customer.DefaultDomainName)`">Exchange Portal</a>"
         'Azure Active Directory' = "<a target=`"_blank`" href=`"https://aad.portal.azure.com/$($Customer.DefaultDomainName)`" >AAD Portal</a>"
-        'MFA Portal (Read Only)' = "<a target=`"_blank`" href=`"https://account.activedirectory.windowsazure.com/usermanagement/multifactorverification.aspx?tenantId=$($Customer.DefaultDomainName)&culture=en-us&requestInitiatedContext=users`" >MFA Portal</a>"
+        'MFA Portal (Read Only)' = "<a target=`"_blank`" href=`"https://account.activedirectory.windowsazure.com/usermanagement/multifactorverification.aspx?tenantId=$($Customer.TenantID)&culture=en-us&requestInitiatedContext=users`" >MFA Portal</a>"
         'Sfb Portal'             = "<a target=`"_blank`" href=`"https://portal.office.com/Partner/BeginClientSession.aspx?CTID=$($Customer.TenantId)&CSDEST=MicrosoftCommunicationsOnline`">SfB Portal</a>"
         'Teams Portal'           = "<a target=`"_blank`" href=`"https://admin.teams.microsoft.com/?delegatedOrg=$($Customer.DefaultDomainName)`">Teams Portal</a>"
         'Azure Portal'           = "<a target=`"_blank`" href=`"https://portal.azure.com/$($customer.DefaultDomainName)`">Azure Portal</a>"
